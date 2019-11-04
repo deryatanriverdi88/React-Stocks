@@ -6,18 +6,18 @@ const SearchBar = (props) => {
 
       <strong>Sort by:</strong>
       <label>
-        <input type="radio" value="Alphabetically" checked={null} onChange={null}/>
-        Alphabetically
+        <select onChange={props.handleSortButton} >
+            <option value="Default">Default</option>
+            <option value="Alphabetically">Alphabetically</option>
+            <option value="Price">Price</option>
+        </select>
       </label>
-      <label>
-        <input type="radio" value="Price" checked={null} onChange={null}/>
-        Price
-      </label>
+     
       <br/>
 
       <label>
         <strong>Filter:</strong>
-        <select onChange={props.handleFilterButton} name="filter">
+        <select onChange={props.handleFilterButton}>
           <option value="All">All</option>
           <option value="Tech">Tech</option>
           <option value="Sportswear">Sportswear</option>
